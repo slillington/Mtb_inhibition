@@ -34,7 +34,7 @@ cis-Aconitate_c0, trans-Aconitate_c0
 GDP-mannose, GDP-glucose
 (R)-(+)-Citronellal_c0, (S)-(-)-Citronellal_c0
 
-asdfadga
+
 '''
 
 
@@ -47,6 +47,8 @@ from rdkit import DataStructs
 from rdkit.Chem.Fingerprints import FingerprintMols
 from operator import itemgetter
 
+
+		
 def get_model_data(excel_file_path):
 
 #get_model_data take the list of inchikeys and smiles from an excel file that contains the .tsv download from KBASE. This .tsv download has information
@@ -64,6 +66,8 @@ def get_model_data(excel_file_path):
 	smiles = sheetX['smiles']
 
 	inchiKeys = list(set(inchiKeys)) #After removing duplicates, 908 InChiKeys for E coli model. Assuming this removes <compound>_c0 and <compound>_e0 duplicates
+	inchiKeys.sort()
+	#print(inchiKeys)
 	return inchiKeys, smiles
 
 def InChiKeyToInChi(keys):
@@ -110,14 +114,15 @@ def InChiKeyToInChi(keys):
 	for d in dict_list:
 		if d["InChi"] == '>':
 			trouble_keys.append(d["InChiKey"])
+		#print(d["InChi"])
 	#print (trouble_keys)
 	#print(len(trouble_keys))
 	trouble_file = open(r'C:\Github\pythonScripts\Mtb_inhibition\trouble_keys_file_toy.txt','w+')
 	for k in trouble_keys:
 		trouble_file.write(str(k)+'\n')
+		
 	return dict_list, trouble_keys
 	
-
 
     
 
@@ -125,20 +130,28 @@ def InChiKeyToInChi(keys):
 def main():
 	inChiKeys,smiles = get_model_data('toy_data.xlsx')
 	#print(inChiKeys)
-	met_dicts, troubles = InChiKeyToInChi(inChiKeys)
+	source = input("Create Mol objects from InChi or SMILES?:   ")
+	if source == 'InChi':
+		met_dicts, troubles = InChiKeyToInChi(inChiKeys)
+		#Convert InChi to Mol
 	
-
-	#Convert InChi to Mol
-	
-	mol_list = []
-	for d in met_dicts:
-		inchi = str(d['InChi'])
+		mol_list = []
+		for d in met_dicts:
+			inchi = str(d['InChi'])
 		
-		if not inchi == '>':
-			mol = Chem.MolFromInchi(inchi,sanitize=False,removeHs=False,logLevel=None,treatWarningAsError=False)
+			if not inchi == '>':
+				mol = Chem.MolFromInchi(inchi,sanitize=False,removeHs=False,logLevel=None,treatWarningAsError=False)
+				mol_list.append(mol)
+			else:
+				mol_list.append(Chem.MolFromInchi('InChI=1S/Hg/q+2')) #InChiKeys with missing InChis are for now Mercury ion
+	elif source == 'SMILES':
+		mol_list = []
+		for s in smiles:
+			mol = Chem.MolFromSmiles(s)
 			mol_list.append(mol)
-		else:
-			continue
+			
+	else:
+		raise IOError(source + ' is Not a valid input')
 
 	#Convert mol objects to bit vectors
 	
@@ -148,17 +161,17 @@ def main():
 	#Compute pairwise Tanimoto similarity for each pair of fingerprints
 	#tanimotos is a list of lists
 	
-	#Construct a list of pairs to back out the compounds that are similar
+	#Loop through list in this way to not get repeat values or compare fingerprints to themselves
 	tanimotos = []
 	for i in range(len(fps)-1):
 		for j in range(i+1,len(fps)):
+			#temp_dict = dict([("Fingerprints",[fps[i],fps[j]]),("Tanimoto_coeff",DataStructs.FingerprintSimilarity(fps[i],fps[j]))])
 			temp_dict = dict([("InChiKeys",[Chem.InchiToInchiKey(Chem.MolToInchi(mol_list[i])),Chem.InchiToInchiKey(Chem.MolToInchi(mol_list[j]))]),("Tanimoto_coeff",DataStructs.FingerprintSimilarity(fps[i],fps[j]))])
 		tanimotos.append(temp_dict)
 	
 	#tanimotos is a list of dicts. Now want to search the tanimoto coeff key for highest values
 	tanimotos.sort(key=lambda x:x['Tanimoto_coeff'])
-	print(tanimotos[-5:])
-	
+	#print(tanimotos)	
 
 if __name__ == "__main__":
 	main()
