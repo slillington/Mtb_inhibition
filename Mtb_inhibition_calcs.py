@@ -41,6 +41,8 @@ GDP-mannose, GDP-glucose
 import pandas as pd
 import xlrd
 import requests
+import json
+import pubchempy as pcp
 from io import BytesIO
 from rdkit import Chem
 from rdkit import DataStructs
@@ -66,8 +68,9 @@ def get_model_data(excel_file_path):
 	smiles = sheetX['smiles']
 
 	inchiKeys = list(set(inchiKeys)) #After removing duplicates, 908 InChiKeys for E coli model. Assuming this removes <compound>_c0 and <compound>_e0 duplicates
+	inchiKeys = [x for x in inchiKeys if not str(x) in ['NaN','nan']]
 	inchiKeys.sort()
-	#print(inchiKeys)
+	
 	return inchiKeys, smiles
 
 def InChiKeyToInChi(keys):
@@ -78,6 +81,7 @@ def InChiKeyToInChi(keys):
 #type output: list[dict]
 #output: list of dictionaries with InChiKey and InChi value pairs for metabolites in the model
 
+#For each InChiKey, search the ChemSpider database for a corresponding InChi string
 	url = 'https://www.chemspider.com/InChI.asmx?op=InChIKeyToInChI'
 	headers = {'content-type': 'text/xml'}
 	dict_list = []
@@ -102,10 +106,7 @@ def InChiKeyToInChi(keys):
 			else:
 				inchi = inchi + txt[idx]
 				idx = idx+1
-		
-		#Need to check if an InChi was found and if not try PubChem wrapper to get an InChi
-		
-		
+		#if InChi was not found, value for "InChi" key is '<'
 		temp = dict([("InChiKey",inChiKey),("InChi",inchi)])
 		dict_list.append(temp)
 		
@@ -113,8 +114,25 @@ def InChiKeyToInChi(keys):
 	trouble_keys = []
 	for d in dict_list:
 		if d["InChi"] == '>':
-			trouble_keys.append(d["InChiKey"])
-		#print(d["InChi"])
+			
+			url = 'http://cts.fiehnlab.ucdavis.edu/rest/convert/InChiKey/InChi%20Code/' + d["InChiKey"]
+			r = requests.get(url)
+			r = r.json()
+			r = r[0]
+			#r = r['result']
+			if r['result']:
+				d["InChi"] = r['result'][0]
+			else:
+				try:
+					result = pcp.get_compounds(d["InChiKey"],'inchikey')
+					d["InChi"] = (result[0].inchi)
+					
+				except:
+					trouble_keys.append(d["InChiKey"])
+					print(d["InChiKey"])
+					d["InChi"] = 'InChi='
+				
+				
 	#print (trouble_keys)
 	#print(len(trouble_keys))
 	trouble_file = open(r'C:\Github\pythonScripts\Mtb_inhibition\trouble_keys_file_toy.txt','w+')
@@ -128,7 +146,7 @@ def InChiKeyToInChi(keys):
 
 
 def main():
-	inChiKeys,smiles = get_model_data('toy_data.xlsx')
+	inChiKeys,smiles = get_model_data(r'C:\GitHub\pythonScripts\Mtb_inhibition\Mtb_inhibition\toy_data.xlsx')
 	#print(inChiKeys)
 	source = input("Create Mol objects from InChi or SMILES?:   ")
 	if source == 'InChi':
@@ -156,7 +174,6 @@ def main():
 	#Convert mol objects to bit vectors
 	
 	fps = [FingerprintMols.FingerprintMol(x) for x in mol_list]
-	#print(fps)
 	
 	#Compute pairwise Tanimoto similarity for each pair of fingerprints
 	#tanimotos is a list of lists
@@ -167,11 +184,16 @@ def main():
 		for j in range(i+1,len(fps)):
 			#temp_dict = dict([("Fingerprints",[fps[i],fps[j]]),("Tanimoto_coeff",DataStructs.FingerprintSimilarity(fps[i],fps[j]))])
 			temp_dict = dict([("InChiKeys",[Chem.InchiToInchiKey(Chem.MolToInchi(mol_list[i])),Chem.InchiToInchiKey(Chem.MolToInchi(mol_list[j]))]),("Tanimoto_coeff",DataStructs.FingerprintSimilarity(fps[i],fps[j]))])
-		tanimotos.append(temp_dict)
+			tanimotos.append(temp_dict)
 	
 	#tanimotos is a list of dicts. Now want to search the tanimoto coeff key for highest values
 	tanimotos.sort(key=lambda x:x['Tanimoto_coeff'])
-	#print(tanimotos)	
+	
+	#Write the dictionary contents to a text file
+	out = open(r'C:\Github\pythonScripts\Mtb_inhibition\Mtb_inhibition\tanimoto_output_toy.txt','w')
+	for t in tanimotos:
+		key_pair = t["InChiKeys"]
+		out.write(key_pair[0] + '	' + key_pair[1] + '	' + str(t["Tanimoto_coeff"]) + '\n')
 
 if __name__ == "__main__":
 	main()
