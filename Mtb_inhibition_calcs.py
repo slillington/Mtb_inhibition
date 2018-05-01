@@ -69,7 +69,9 @@ def get_model_data(excel_file_path):
 
 	inchiKeys = list(set(inchiKeys)) #After removing duplicates, 908 InChiKeys for E coli model. Assuming this removes <compound>_c0 and <compound>_e0 duplicates
 	inchiKeys = [x for x in inchiKeys if not str(x) in ['NaN','nan']]
+	smiles = [y for y in smiles if not str(y) in ['NaN','nan']]
 	inchiKeys.sort()
+	smiles.sort()
 	
 	return inchiKeys, smiles
 
@@ -114,7 +116,7 @@ def InChiKeyToInChi(keys):
 	trouble_keys = []
 	for d in dict_list:
 		if d["InChi"] == '>':
-			
+			print(d)
 			url = 'http://cts.fiehnlab.ucdavis.edu/rest/convert/InChiKey/InChi%20Code/' + d["InChiKey"]
 			r = requests.get(url)
 			r = r.json()
@@ -126,11 +128,13 @@ def InChiKeyToInChi(keys):
 				try:
 					result = pcp.get_compounds(d["InChiKey"],'inchikey')
 					d["InChi"] = (result[0].inchi)
+					print(d["InChi"])
 					
 				except:
 					trouble_keys.append(d["InChiKey"])
 					print(d["InChiKey"])
-					d["InChi"] = 'InChi='
+					d["InChi"] = 'InChI=1S/Hg/q+2'
+					
 				
 				
 	#print (trouble_keys)
@@ -160,8 +164,8 @@ def main():
 			if not inchi == '>':
 				mol = Chem.MolFromInchi(inchi,sanitize=False,removeHs=False,logLevel=None,treatWarningAsError=False)
 				mol_list.append(mol)
-			else:
-				mol_list.append(Chem.MolFromInchi('InChI=1S/Hg/q+2')) #InChiKeys with missing InChis are for now Mercury ion
+			#else:
+			#	mol_list.append(Chem.MolFromInchi('InChI=1S/Hg/q+2')) #InChiKeys with missing InChis are for now Mercury ion
 	elif source == 'SMILES':
 		mol_list = []
 		for s in smiles:
@@ -173,17 +177,18 @@ def main():
 
 	#Convert mol objects to bit vectors
 	
-	fps = [FingerprintMols.FingerprintMol(x) for x in mol_list]
+	fps_rdk = [FingerprintMols.FingerprintMol(x,fingerprinter=Chem.RDKFingerprint) for x in mol_list]
+	#fps_m = 
 	
 	#Compute pairwise Tanimoto similarity for each pair of fingerprints
 	#tanimotos is a list of lists
 	
 	#Loop through list in this way to not get repeat values or compare fingerprints to themselves
 	tanimotos = []
-	for i in range(len(fps)-1):
-		for j in range(i+1,len(fps)):
+	for i in range(len(fps_rdk)-1):
+		for j in range(i+1,len(fps_rdk)):
 			#temp_dict = dict([("Fingerprints",[fps[i],fps[j]]),("Tanimoto_coeff",DataStructs.FingerprintSimilarity(fps[i],fps[j]))])
-			temp_dict = dict([("InChiKeys",[Chem.InchiToInchiKey(Chem.MolToInchi(mol_list[i])),Chem.InchiToInchiKey(Chem.MolToInchi(mol_list[j]))]),("Tanimoto_coeff",DataStructs.FingerprintSimilarity(fps[i],fps[j]))])
+			temp_dict = dict([("InChiKeys",[Chem.InchiToInchiKey(Chem.MolToInchi(mol_list[i])),Chem.InchiToInchiKey(Chem.MolToInchi(mol_list[j]))]),("Tanimoto_coeff",DataStructs.FingerprintSimilarity(fps_rdk[i],fps_rdk[j]))])
 			tanimotos.append(temp_dict)
 	
 	#tanimotos is a list of dicts. Now want to search the tanimoto coeff key for highest values
@@ -195,6 +200,8 @@ def main():
 		key_pair = t["InChiKeys"]
 		out.write(key_pair[0] + '	' + key_pair[1] + '	' + str(t["Tanimoto_coeff"]) + '\n')
 
+		
+		
 if __name__ == "__main__":
 	main()
 
