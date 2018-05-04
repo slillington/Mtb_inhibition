@@ -32,18 +32,18 @@ def fba_on_sim_mets():
 	
 	'''
 	#KBASE Model
-	model = cobra.io.read_sbml_model('C:\GitHub\pythonScripts\Mtb_inhibition\model_objects\model_objects\iAF1260b.xml_model.sbml')
-	#model = cobra.io.read_sbml_model('C:\GitHub\pythonScripts\Mtb_inhibition\Mtb_inhibition\Ecoli_MG1655_model.sbml')
+	model_KBASE = cobra.io.read_sbml_model('C:\GitHub\pythonScripts\Mtb_inhibition\model_objects\model_objects\iAF1260b.xml_model.sbml')
+	model_BiGG = cobra.io.load_json_model('C:\GitHub\pythonScripts\Mtb_inhibition\Mtb_inhibition\iAF1260b.json')
 	#Add needed reactions
 	
 	#Set flux for glucose uptake to be 10
 	#model.reactions.get_by_id("EX_cpd00027_e0").lower_bound = -1000
-	model.reactions.get_by_id("EX_cpd00027_e0").upper_bound = -5
+	model_KBASE.reactions.get_by_id("EX_cpd00027_e0").upper_bound = -5
 	#model.reactions.get_by_id("GLCabc_c0").lower_bound = 10
-	model.reactions.get_by_id("EX_cpd00007_e0").upper_bound = -7
+	model_KBASE.reactions.get_by_id("EX_cpd00007_e0").upper_bound = -7
 	#model.reactions.get_by_id("ATPS4r_c0").lower_bound = 0
 	#model.objective = "BIOMASS_Mtb_9_60atp_c0"
-	model.objective = "bio1"
+	model_KBASE.objective = "bio1"
 	#print(model.reactions.get_by_id("bio1").bounds)
 	#print(model.reactions.get_by_id("BIOMASS_Mtb_9_60atp_c0").bounds)
 	#model.reactions.get_by_id("BIOMASS_Mtb_9_60atp_c0").upper_bound = 0
@@ -51,39 +51,58 @@ def fba_on_sim_mets():
 	#model.optimize()
 	#print(model.summary())
 	
+	#Set flux for glucose uptake for BiGG model
+	model_BiGG.reactions.get_by_id("EX_glc__D_e").upper_bound = -5
+	model_BiGG.reactions.get_by_id("EX_o2_e").upper_bound = -7
 	
 	#Read in list of compound IDs
-	xls = pd.ExcelFile(r'C:\GitHub\pythonScripts\Mtb_inhibition\Mtb_inhibition\toy_data_output_test.xlsx')
-	sheetX = xls.parse(0) #1 is the sheet number
+	xls = pd.ExcelFile(r'C:\GitHub\pythonScripts\Mtb_inhibition\Mtb_inhibition\Output_EcoliiAF1260b_AllMetabolites_5_3.xlsx')
+	sheetX = xls.parse(0) #0 is the sheet number
 	mets1 = sheetX['Met 1 cID']
+	mets1 = list(set(mets1)) #Remove duplicates b/c we only need to test the knockouts once
 	mets2 = sheetX['Met 2 cID']
+	mets2 = list(set(mets2)) #Remove duplicates b/c we only need to test the knockouts once
 	
 	
 	#Iterate through the list of pairs and see which ones give growth rates of 0
-	#Remove any cofactors from the list (NAD, NADP, NADH, NADPH)
+	#Remove any cofactors from the list (NAD, NADP, NADH, NADPH, AMP, ADP, ATP)
 	rxns_list = []
 	for m in mets1:
-		a1 = model.metabolites.get_by_id(m)
-		for r in a1.reactions:
-			temp = r.metabolites #Returns a dict with the metabolites in each reaction involving the specified metabolite and the coefficient.
-			if temp[a1] < 0:
-				rxns_list.append(r)
-
+		if str(m) in ['nan','Nan']:
+			continue
+		else:
+			a1 = model_KBASE.metabolites.get_by_id(m)
+			for r in a1.reactions:
+				temp = r.metabolites #Returns a dict with the metabolites in each reaction involving the specified metabolite and the coefficient.
+				#print(temp)
+				#print(temp[a1])
+				if temp[a1] < 0:
+					rxns_list.append(r)
 	for m2 in mets2:
-		a2 = model.metabolites.get_by_id(m2)
-		for r2 in a2.reactions:
-			temp = r2.metabolites #Returns a dict with the metabolites in each reaction involving the specified metabolite and the coefficient.
-			if temp[a2] < 0:
-				rxns_list.append(r2)
-
+		if str(m2) in ['nan','Nan']:
+			continue
+		else:
+			a2 = model_KBASE.metabolites.get_by_id(m2)
+			for r2 in a2.reactions:
+				temp = r2.metabolites #Returns a dict with the metabolites in each reaction involving the specified metabolite and the coefficient.
+			
+				if temp[a2] < 0:
+					rxns_list.append(r2)
+				
+	#print(len(mets))
+	#print(len(rxns_list))
+	#mets = list(set(mets))
+	#print(len(mets))
 	#Simulate single reaction knockouts for list of rxns_list
 	#rxns_list = [model.reactions.get_by_id('ADK4_c0'),model.reactions.get_by_id('MYCON5_c0')]
 	#a = model.optimize()
 	#print(a.fluxes)
 	#print(model.summary())
-	table = single_reaction_deletion(model,rxns_list)
-	FBAoutput = pd.ExcelWriter('C:\Github\pythonScripts\Mtb_inhibition\Mtb_inhibition\FBAoutput.xlsx')
-	table.to_excel(FBAoutput,'Sheet1')
+	table = single_reaction_deletion(model_KBASE,rxns_list)
+	table2 = single_reaction_deletion(model_BiGG,model_BiGG.reactions)
+	FBAoutput = pd.ExcelWriter('C:\Github\pythonScripts\Mtb_inhibition\Mtb_inhibition\FBAoutput_Ecoli_all.xlsx')
+	table.to_excel(FBAoutput,'Sheet1',startcol=0)
+	table2.to_excel(FBAoutput,'Sheet1',startcol=3)
 	FBAoutput.save()
 	
 	return

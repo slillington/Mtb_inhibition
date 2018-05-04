@@ -150,7 +150,7 @@ def InChiKeyToInChi(keys):
 
 
 def main():
-	inChiKeys,smiles = get_model_data(r'C:\GitHub\pythonScripts\Mtb_inhibition\Mtb_inhibition\toy_data.xlsx')
+	inChiKeys,smiles = get_model_data(r'C:\GitHub\pythonScripts\Mtb_inhibition\Mtb_inhibition\toy_data_noXTP_cofactors.xlsx')
 	#print(inChiKeys)
 	source = input("Create Mol objects from InChi or SMILES?:   ")
 	if source == 'InChi':
