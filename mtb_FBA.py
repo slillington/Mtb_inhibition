@@ -33,9 +33,9 @@ def fba_on_sim_mets():
 	'''
 	#KBASE Model
 	model_KBASE = cobra.io.read_sbml_model('C:\GitHub\pythonScripts\Mtb_inhibition\model_objects\model_objects\iAF1260b.xml_model.sbml')
-	model_BiGG = cobra.io.load_json_model('C:\GitHub\pythonScripts\Mtb_inhibition\Mtb_inhibition\iAF1260b.json')
+	model_BiGG = cobra.io.load_json_model('C:\GitHub\pythonScripts\Mtb_inhibition\Mtb_inhibition\iNJ661.json')
 	#Add needed reactions
-	
+	'''
 	#Set flux for glucose uptake to be 10
 	#model.reactions.get_by_id("EX_cpd00027_e0").lower_bound = -1000
 	model_KBASE.reactions.get_by_id("EX_cpd00027_e0").upper_bound = -5
@@ -88,21 +88,17 @@ def fba_on_sim_mets():
 			
 				if temp[a2] < 0:
 					rxns_list.append(r2)
-				
-	#print(len(mets))
-	#print(len(rxns_list))
-	#mets = list(set(mets))
-	#print(len(mets))
+	'''			
+
 	#Simulate single reaction knockouts for list of rxns_list
-	#rxns_list = [model.reactions.get_by_id('ADK4_c0'),model.reactions.get_by_id('MYCON5_c0')]
 	#a = model.optimize()
 	#print(a.fluxes)
 	#print(model.summary())
-	table = single_reaction_deletion(model_KBASE,rxns_list)
+	#table = single_reaction_deletion(model_KBASE,rxns_list)
 	table2 = single_reaction_deletion(model_BiGG,model_BiGG.reactions)
-	FBAoutput = pd.ExcelWriter('C:\Github\pythonScripts\Mtb_inhibition\Mtb_inhibition\FBAoutput_Ecoli_all.xlsx')
-	table.to_excel(FBAoutput,'Sheet1',startcol=0)
-	table2.to_excel(FBAoutput,'Sheet1',startcol=3)
+	FBAoutput = pd.ExcelWriter('C:\Github\pythonScripts\Mtb_inhibition\Mtb_inhibition\FBAoutput_Mtb_all.xlsx')
+	#table.to_excel(FBAoutput,'Sheet1',startcol=0)
+	table2.to_excel(FBAoutput,'Sheet1',startcol=0)
 	FBAoutput.save()
 	
 	return

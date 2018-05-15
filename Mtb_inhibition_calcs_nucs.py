@@ -62,7 +62,7 @@ def get_model_data(excel_file_path):
 
     #xls = pd.ExcelFile('escherichia_coliMG1655_mets.xlsx')
 	xls = pd.ExcelFile(excel_file_path)
-	sheetX = xls.parse(2) #2 is the sheet number (c0 only)
+	sheetX = xls.parse(1) #1 is the sheet number (c0 only)
 
 	inchiKeys = sheetX['inchikey'] #Original length = 1275 InChiKeys for E coli model
 	smiles = sheetX['smiles']
@@ -76,6 +76,10 @@ def get_model_data(excel_file_path):
 	
 	return inchiKeys, smiles
 
+
+
+
+	
 def InChiKeyToInChi(keys):
 #InChiKeyToInChi() take the set of InChiKeys passed as an argument and uses the ChemSpider InChiKey --> InChi functionality to pair a corresponding
 #InChi to a given InChiKey. This take a while to run - on the order of 10 minutes for a list of ~900 InChiKeys.
@@ -83,12 +87,15 @@ def InChiKeyToInChi(keys):
 #input: list of InChiKey strings
 #type output: list[dict]
 #output: list of dictionaries with InChiKey and InChi value pairs for metabolites in the model
+	
 
 #For each InChiKey, search the ChemSpider database for a corresponding InChi string
 	url = 'https://www.chemspider.com/InChI.asmx?op=InChIKeyToInChI'
 	headers = {'content-type': 'text/xml'}
 	dict_list = []
-	print('Getting InChis from ChemSpider')
+	
+	#Report progress and get InChis from ChemSpider
+	print('Getting InChis from ChemSpider.')
 	for inChiKey in keys:
 		body = """<?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
@@ -117,7 +124,7 @@ def InChiKeyToInChi(keys):
 	#Check the list for InChiKeys that were not paired with a corresponding InChi
 	print('Checking ChemSpider results for InChiKeys with no InChi pair')
 	trouble_keys = []
-	inChis_inChiKeys_file = open(r'C:\Github\pythonScripts\Mtb_inhibition\inchis_inchikeys_iAF1260b.txt','w+')
+	inChis_inChiKeys_file = open(r'C:\Github\pythonScripts\Mtb_inhibition\inchis_inchikeys_iNJ661.txt','w+')
 	#Tweak this one time to write to a file that I can use in the future
 	for d in dict_list:
 		if d["InChi"] == '>':
@@ -163,6 +170,7 @@ def InChiKeyToInChi(keys):
 		trouble_file.write(str(k)+'\n')
 		
 	return dict_list, trouble_keys
+
 	
 def inchiToMol(excel_file,sheet):
 	mol_list = []
@@ -178,7 +186,8 @@ def inchiToMol(excel_file,sheet):
 		#else:
 		#	mol_list.append(Chem.MolFromInchi('InChI=1S/Hg/q+2')) #InChiKeys with missing InChis are for now Mercury ion	
 	return mol_list
-		
+
+	
 def smilesToMol(smiles):
 	mol_list = []
 	for s in smiles:
@@ -186,6 +195,7 @@ def smilesToMol(smiles):
 		mol_list.append(mol)
 	return mol_list
 
+	
 def fingerprint_and_tanimoto(mol_list):
 	fps_rdk = [FingerprintMols.FingerprintMol(x,fingerprinter=Chem.RDKFingerprint) for x in mol_list]
 	#fps_m = 
@@ -210,16 +220,19 @@ def fingerprint_and_tanimoto(mol_list):
 		key_pair = t["InChiKeys"]
 		out.write(key_pair[0] + '	' + key_pair[1] + '	' + str(t["Tanimoto_coeff"]) + '\n')
 
-	
+
+
+		
 def main():
-	#inChiKeys,smiles = get_model_data(r'C:\GitHub\pythonScripts\MSlibrary-generation\escherichia_coliMG1655_mets.xlsx')
-	
+	#inChiKeys,smiles = get_model_data(r'C:\GitHub\pythonScripts\Mtb_inhibition\Mtb_inhibition\mycobacterium_tuberculosis_mets.xlsx')
+
+
 	source = input("Create Mol objects from InChi or SMILES?:   ")
 	if source == 'InChi':
 		#met_dicts, troubles = InChiKeyToInChi(inChiKeys)
 		
 		#Convert InChi to Mol
-		mol_list = inchiToMol('C:\Github\pythonScripts\Mtb_inhibition\Mtb_inhibition\E_coli_iAF1260b_inchis_and_inchikeys.xlsx',0)
+		mol_list = inchiToMol('C:\Github\pythonScripts\Mtb_inhibition\Mtb_inhibition\Mtb_iNJ661_inchis_and_inchikeys.xlsx',0)
 	elif source == 'SMILES': #WARNING WILL NOT WORK RIGHT NOW
 		mol_list = smilesToMol(smiles)
 			
@@ -228,9 +241,7 @@ def main():
 
 	#print(len(mol_list))
 	#Convert mol objects to bit vectors and calculate tanimoto coefficients
-	fingerprint_and_tanimoto(mol_list)
-	
-	
+	fingerprint_and_tanimoto(mol_list)	
 	
 		
 		
