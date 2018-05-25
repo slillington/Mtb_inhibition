@@ -11,7 +11,7 @@ import json
 import csv
 import re
 
-
+#Make it possible to make an instance of a BiGG object for any BiGG model
 class BiGG(object):
 
     def __init__(self):

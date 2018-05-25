@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version3" level="2" version="3">
+  <model id="BRENDA_Mycobacterium_tuberculosis" metaid="metaid_1" name="BRENDA_Mycobacterium_tuberculosis">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <p>The SBML-model at hand is based on the BRENDA Enzyme-Database: http://www.brenda-enzymes.org</p>
+      </body>
+    </notes>
+    <listOfFunctionDefinitions>
+      <functionDefinition id="kl_0" metaid="metaid_6" name="kl_0">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>Ki_Value</ci>
+            </bvar>
+            <bvar>
+              <ci>pH_of_Experiment</ci>
+            </bvar>
+          <notanumber/> </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="kl_1" metaid="metaid_17" name="kl_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>Ki_Value</ci>
+            </bvar>
+          <notanumber/> </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="kl_2" metaid="metaid_24" name="kl_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>Ki_Value</ci>
+            </bvar>
+            <bvar>
+              <ci>Temperature_of_Experiment</ci>
+            </bvar>
+          <notanumber/> </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="kl_3" metaid="metaid_33" name="kl_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>Ki_Value</ci>
+            </bvar>
+            <bvar>
+              <ci>pH_of_Experiment</ci>
+            </bvar>
+            <bvar>
+              <ci>Temperature_of_Experiment</ci>
+            </bvar>
+          <notanumber/> </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="kl_4" metaid="metaid_44" name="kl_4">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>Ki_Value</ci>
+            </bvar>
+            <bvar>
+              <ci>Ki_Value</ci>
+            </bvar>
+            <bvar>
+              <ci>Ki_Value</ci>
+            </bvar>
+          <notanumber/> </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="kl_5" metaid="metaid_56" name="kl_5">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci>Ki_Value</ci>
+            </bvar>
+            <bvar>
+              <ci>pH_of_Experiment</ci>
+            </bvar>
+            <bvar>
+              <ci>Temperature_of_Experiment</ci>
+            </bvar>
+            <bvar>
+              <ci>Ki_Value</ci>
+            </bvar>
+            <bvar>
+              <ci>pH_of_Experiment</ci>
+            </bvar>
+            <bvar>
+              <ci>Temperature_of_Experiment</ci>
+            </bvar>
+            <bvar>
+              <ci>Ki_Value</ci>
+            </bvar>
+            <bvar>
+              <ci>pH_of_Experiment</ci>
+            </bvar>
+            <bvar>
+              <ci>Temperature_of_Experiment</ci>
+            </bvar>
+          <notanumber/> </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition id="mM" metaid="metaid_2" name="mM">
+        <listOfUnits>
+          <unit exponent="-1" kind="litre" multiplier="1"></unit>
+          <unit kind="mole" multiplier="1" scale="-3"></unit>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="onepers" metaid="metaid_3" name="onepers">
+        <listOfUnits>
+          <unit exponent="-1" kind="second" multiplier="1"></unit>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="degreecelsius" metaid="metaid_4" name="degreecelsius">
+        <listOfUnits>
+          <unit kind="kelvin" multiplier="1"></unit>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="undefined" metaid="metaid_5" name="undefined" size="1"></compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species compartment="undefined" id="spec_ATRANS23DEHYDROACYLACYLCARRIERPROTEIN" metaid="metaid_7" name="a trans-2,3-dehydroacyl-[acyl-carrier protein]"></species>
+      <species compartment="undefined" id="spec_NADH" metaid="metaid_8" name="NADH"></species>
+      <species compartment="undefined" id="spec_Hplus" metaid="metaid_9" name="H+"></species>
+      <species compartment="undefined" id="spec_ANACYLACYLCARRIERPROTEIN" metaid="metaid_10" name="an acyl-[acyl-carrier protein]"></species>
+      <species compartment="undefined" id="spec_NADplus" metaid="metaid_11" name="NAD+"></species>
+      <species compartment="undefined" id="enz_EC_1_3_1_9" metaid="metaid_12" name="enoyl-[acyl-carrier-protein] reductase (NADH)"></species>
+      <species compartment="undefined" id="inh_2OTOLYLOXY5HEXYLPHENOL" metaid="metaid_13" name="2-(o-tolyloxy)-5-hexylphenol"></species>
+      <species compartment="undefined" id="spec_78DIHYDROFOLATE" metaid="metaid_18" name="7,8-dihydrofolate"></species>
+      <species compartment="undefined" id="spec_5678TETRAHYDROFOLATE" metaid="metaid_19" name="5,6,7,8-tetrahydrofolate"></species>
+      <species compartment="undefined" id="enz_EC_1_5_1_3" metaid="metaid_20" name="dihydrofolate reductase"></species>
+      <species compartment="undefined" id="inh_ISONIAZID" metaid="metaid_21" name="Isoniazid"></species>
+      <species compartment="undefined" id="spec_510METHYLENE5678TETRAHYDROFOLATE" metaid="metaid_25" name="5,10-methylene-5,6,7,8-tetrahydrofolate"></species>
+      <species compartment="undefined" id="spec_DUMP" metaid="metaid_26" name="dUMP"></species>
+      <species compartment="undefined" id="spec_DTMP" metaid="metaid_27" name="dTMP"></species>
+      <species compartment="undefined" id="enz_EC_2_1_1_45" metaid="metaid_28" name="thymidylate synthase"></species>
+      <species compartment="undefined" id="inh_5FLUORO2DEOXYURIDINE5MONOPHOSPHATE" metaid="metaid_29" name="5-fluoro-2'-deoxyuridine 5'-monophosphate"></species>
+      <species compartment="undefined" id="spec_S16FLUORO2METHYL34DIHYDROQUINOLIN12HYL2ISOQUINOLIN5YLOXYETHANONE" metaid="metaid_34" name="(S)-1-(6-fluoro-2-methyl-3,4-dihydroquinolin-1(2H)-yl)-2-(isoquinolin-5-yloxy)ethanone"></species>
+      <species compartment="undefined" id="spec_H2O" metaid="metaid_35" name="H2O"></species>
+      <species compartment="undefined" id="spec_2S6FLUORO2METHYL1234TETRAHYDROQUINOLINE" metaid="metaid_36" name="(2S)-6-fluoro-2-methyl-1,2,3,4-tetrahydroquinoline"></species>
+      <species compartment="undefined" id="spec_ISOQUINOLIN5YLOXYACETICACID" metaid="metaid_37" name="(isoquinolin-5-yloxy)acetic acid"></species>
+      <species compartment="undefined" id="enz_EC_3_1_1_1" metaid="metaid_38" name="carboxylesterase"></species>
+      <species compartment="undefined" id="inh_DIETHYL4NITROPHENYLPHOSPHATE" metaid="metaid_39" name="diethyl 4-nitrophenyl phosphate"></species>
+      <species compartment="undefined" id="spec_ATP" metaid="metaid_45" name="ATP"></species>
+      <species compartment="undefined" id="spec_ADP" metaid="metaid_46" name="ADP"></species>
+      <species compartment="undefined" id="spec_DTDP" metaid="metaid_47" name="dTDP"></species>
+      <species compartment="undefined" id="enz_EC_2_7_4_9" metaid="metaid_48" name="dTMP kinase"></species>
+      <species compartment="undefined" id="inh_12E456BISHYDROXYMETHYL2OXOBENZOCDINDOL12HYLBUT2EN1YL5METHYLPYRIMIDINE241H3HDIONE" metaid="metaid_49" name="1-[(2E)-4-[5,6-bis(hydroxymethyl)-2-oxobenzo[cd]indol-1(2H)-yl]but-2-en-1-yl]-5-methylpyrimidine-2,4(1H,3H)-dione"></species>
+      <species compartment="undefined" id="inh_12E456DIMETHOXY1OXO13DIHYDRO2HISOINDOL2YLBUT2EN1YL5METHYLPYRIMIDINE241H3HDIONE" metaid="metaid_52" name="1-[(2E)-4-(5,6-dimethoxy-1-oxo-1,3-dihydro-2H-isoindol-2-yl)but-2-en-1-yl]-5-methylpyrimidine-2,4(1H,3H)-dione"></species>
+      <species compartment="undefined" id="inh_5METHOXY22E45METHYL24DIOXO34DIHYDROPYRIMIDIN12HYLBUT2EN1YL1HISOINDOLE132HDIONE" metaid="metaid_54" name="5-methoxy-2-[(2E)-4-(5-methyl-2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)but-2-en-1-yl]-1H-isoindole-1,3(2H)-dione"></species>
+      <species compartment="undefined" id="spec_1DEOXYLGLYCEROTETRULOSE4PHOSPHATE" metaid="metaid_57" name="1-deoxy-L-glycero-tetrulose 4-phosphate"></species>
+      <species compartment="undefined" id="spec_5AMINO6DRIBITYLAMINOURACIL" metaid="metaid_58" name="5-amino-6-(D-ribitylamino)uracil"></species>
+      <species compartment="undefined" id="spec_67DIMETHYL8DRIBITYLLUMAZINE" metaid="metaid_59" name="6,7-dimethyl-8-(D-ribityl)lumazine"></species>
+      <species compartment="undefined" id="spec_2H2O" metaid="metaid_60" name="2 H2O"></species>
+      <species compartment="undefined" id="spec_PHOSPHATE" metaid="metaid_61" name="phosphate"></species>
+      <species compartment="undefined" id="enz_EC_2_5_1_78" metaid="metaid_62" name="6,7-dimethyl-8-ribityllumazine synthase"></species>
+      <species compartment="undefined" id="inh_1DEOXY1268TRIOXO74PHOSPHONOOXYBUTYL123678HEXAHYDRO9HPURIN9YLDRIBITOL" metaid="metaid_63" name="1-deoxy-1-[2,6,8-trioxo-7-[4-(phosphonooxy)butyl]-1,2,3,6,7,8-hexahydro-9H-purin-9-yl]-D-ribitol"></species>
+      <species compartment="undefined" id="inh_446DIOXO4567TETRAHYDRO1DRIBITYL1HPYRAZOLO34DPYRIMIDIN3YLBUTYL1PHOSPHATE" metaid="metaid_68" name="4-[4,6-dioxo-4,5,6,7-tetrahydro1-D-ribityl-1H-pyrazolo[3,4-d]-pyrimidin-3-yl]butyl 1-phosphate"></species>
+      <species compartment="undefined" id="inh_1DEOXY1268TRIOXO75PHOSPHONOOXYPENTYL123678HEXAHYDRO9HPURIN9YLDRIBITOL" metaid="metaid_72" name="1-deoxy-1-[2,6,8-trioxo-7-[5-(phosphonooxy)pentyl]-1,2,3,6,7,8-hexahydro-9H-purin-9-yl]-D-ribitol"></species>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="reaction_438122" metaid="metaid_14" name="reaction_438122_enoyl-[acyl-carrier-protein] reductase (NADH)" reversible="true">
+        <listOfReactants>
+          <speciesReference species="spec_ATRANS23DEHYDROACYLACYLCARRIERPROTEIN"></speciesReference>
+          <speciesReference species="spec_NADH"></speciesReference>
+          <speciesReference species="spec_Hplus"></speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="spec_ANACYLACYLCARRIERPROTEIN"></speciesReference>
+          <speciesReference species="spec_NADplus"></speciesReference>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="enz_EC_1_3_1_9"></modifierSpeciesReference>
+          <modifierSpeciesReference species="inh_2OTOLYLOXY5HEXYLPHENOL"></modifierSpeciesReference>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci>kl_0</ci>
+              <ci>Ki_Value_2OTOLYLOXY5HEXYLPHENOL_712422_1</ci>
+              <ci>pH_of_Experiment__712422_1</ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter constant="true" id="Ki_Value_2OTOLYLOXY5HEXYLPHENOL_712422_1" metaid="metaid_15" name="Ki_Value" units="mM" value="0.000000022"></parameter>
+            <parameter constant="true" id="pH_of_Experiment__712422_1" metaid="metaid_16" name="pH_of_Experiment" units="dimensionless" value="6.8"></parameter>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="reaction_424618" metaid="metaid_22" name="reaction_424618_dihydrofolate reductase" reversible="true">
+        <listOfReactants>
+          <speciesReference species="spec_78DIHYDROFOLATE"></speciesReference>
+          <speciesReference species="spec_NADH"></speciesReference>
+          <speciesReference species="spec_Hplus"></speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="spec_5678TETRAHYDROFOLATE"></speciesReference>
+          <speciesReference species="spec_NADplus"></speciesReference>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="enz_EC_1_5_1_3"></modifierSpeciesReference>
+          <modifierSpeciesReference species="inh_ISONIAZID"></modifierSpeciesReference>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci>kl_1</ci>
+              <ci>Ki_Value_ISONIAZID_676136_2</ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter constant="true" id="Ki_Value_ISONIAZID_676136_2" metaid="metaid_23" name="Ki_Value" units="mM" value="0.000001"></parameter>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="reaction_319728" metaid="metaid_30" name="reaction_319728_thymidylate synthase" reversible="true">
+        <listOfReactants>
+          <speciesReference species="spec_510METHYLENE5678TETRAHYDROFOLATE"></speciesReference>
+          <speciesReference species="spec_DUMP"></speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="spec_78DIHYDROFOLATE"></speciesReference>
+          <speciesReference species="spec_DTMP"></speciesReference>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="enz_EC_2_1_1_45"></modifierSpeciesReference>
+          <modifierSpeciesReference species="inh_5FLUORO2DEOXYURIDINE5MONOPHOSPHATE"></modifierSpeciesReference>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci>kl_2</ci>
+              <ci>Ki_Value_5FLUORO2DEOXYURIDINE5MONOPHOSPHATE_694812_3</ci>
+              <ci>Temperature_of_Experiment__694812_3</ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter constant="true" id="Ki_Value_5FLUORO2DEOXYURIDINE5MONOPHOSPHATE_694812_3" metaid="metaid_31" name="Ki_Value" units="mM" value="0.000002"></parameter>
+            <parameter constant="true" id="Temperature_of_Experiment__694812_3" metaid="metaid_32" name="Temperature_of_Experiment" units="degreecelsius" value="22"></parameter>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="reaction_410676" metaid="metaid_40" name="reaction_410676_carboxylesterase" reversible="true">
+        <listOfReactants>
+          <speciesReference species="spec_S16FLUORO2METHYL34DIHYDROQUINOLIN12HYL2ISOQUINOLIN5YLOXYETHANONE"></speciesReference>
+          <speciesReference species="spec_H2O"></speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="spec_2S6FLUORO2METHYL1234TETRAHYDROQUINOLINE"></speciesReference>
+          <speciesReference species="spec_ISOQUINOLIN5YLOXYACETICACID"></speciesReference>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="enz_EC_3_1_1_1"></modifierSpeciesReference>
+          <modifierSpeciesReference species="inh_DIETHYL4NITROPHENYLPHOSPHATE"></modifierSpeciesReference>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci>kl_3</ci>
+              <ci>Ki_Value_DIETHYL4NITROPHENYLPHOSPHATE_668463_4</ci>
+              <ci>pH_of_Experiment__668463_4</ci>
+              <ci>Temperature_of_Experiment__668463_4</ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter constant="true" id="Ki_Value_DIETHYL4NITROPHENYLPHOSPHATE_668463_4" metaid="metaid_41" name="Ki_Value" units="mM" value="0.000003"></parameter>
+            <parameter constant="true" id="pH_of_Experiment__668463_4" metaid="metaid_42" name="pH_of_Experiment" units="dimensionless" value="7"></parameter>
+            <parameter constant="true" id="Temperature_of_Experiment__668463_4" metaid="metaid_43" name="Temperature_of_Experiment" units="degreecelsius" value="25"></parameter>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="reaction_358191" metaid="metaid_50" name="reaction_358191_dTMP kinase" reversible="true">
+        <listOfReactants>
+          <speciesReference species="spec_ATP"></speciesReference>
+          <speciesReference species="spec_DTMP"></speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="spec_ADP"></speciesReference>
+          <speciesReference species="spec_DTDP"></speciesReference>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="enz_EC_2_7_4_9"></modifierSpeciesReference>
+          <modifierSpeciesReference species="inh_12E456BISHYDROXYMETHYL2OXOBENZOCDINDOL12HYLBUT2EN1YL5METHYLPYRIMIDINE241H3HDIONE"></modifierSpeciesReference>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci>kl_4</ci>
+              <ci>Ki_Value_12E456BISHYDROXYMETHYL2OXOBENZOCDINDOL12HYLBUT2EN1YL5METHYLPYRIMIDINE241H3HDIONE_739640_5</ci>
+              <ci>Ki_Value_12E456DIMETHOXY1OXO13DIHYDRO2HISOINDOL2YLBUT2EN1YL5METHYLPYRIMIDINE241H3HDIONE_739640_6</ci>
+              <ci>Ki_Value_5METHOXY22E45METHYL24DIOXO34DIHYDROPYRIMIDIN12HYLBUT2EN1YL1HISOINDOLE132HDIONE_739640_7</ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter constant="true" id="Ki_Value_12E456BISHYDROXYMETHYL2OXOBENZOCDINDOL12HYLBUT2EN1YL5METHYLPYRIMIDINE241H3HDIONE_739640_5" metaid="metaid_51" name="Ki_Value" units="mM" value="0.000004"></parameter>
+            <parameter constant="true" id="Ki_Value_12E456DIMETHOXY1OXO13DIHYDRO2HISOINDOL2YLBUT2EN1YL5METHYLPYRIMIDINE241H3HDIONE_739640_6" metaid="metaid_53" name="Ki_Value" units="mM" value="0.000004"></parameter>
+            <parameter constant="true" id="Ki_Value_5METHOXY22E45METHYL24DIOXO34DIHYDROPYRIMIDIN12HYLBUT2EN1YL1HISOINDOLE132HDIONE_739640_7" metaid="metaid_55" name="Ki_Value" units="mM" value="0.000004"></parameter>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="reaction_436231" metaid="metaid_64" name="reaction_436231_6,7-dimethyl-8-ribityllumazine synthase" reversible="true">
+        <listOfReactants>
+          <speciesReference species="spec_1DEOXYLGLYCEROTETRULOSE4PHOSPHATE"></speciesReference>
+          <speciesReference species="spec_5AMINO6DRIBITYLAMINOURACIL"></speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="spec_67DIMETHYL8DRIBITYLLUMAZINE"></speciesReference>
+          <speciesReference species="spec_2H2O"></speciesReference>
+          <speciesReference species="spec_PHOSPHATE"></speciesReference>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="enz_EC_2_5_1_78"></modifierSpeciesReference>
+          <modifierSpeciesReference species="inh_1DEOXY1268TRIOXO74PHOSPHONOOXYBUTYL123678HEXAHYDRO9HPURIN9YLDRIBITOL"></modifierSpeciesReference>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci>kl_5</ci>
+              <ci>Ki_Value_1DEOXY1268TRIOXO74PHOSPHONOOXYBUTYL123678HEXAHYDRO9HPURIN9YLDRIBITOL_699719_8</ci>
+              <ci>pH_of_Experiment__699719_8</ci>
+              <ci>Temperature_of_Experiment__699719_8</ci>
+              <ci>Ki_Value_446DIOXO4567TETRAHYDRO1DRIBITYL1HPYRAZOLO34DPYRIMIDIN3YLBUTYL1PHOSPHATE_688576_9</ci>
+              <ci>pH_of_Experiment__688576_9</ci>
+              <ci>Temperature_of_Experiment__688576_9</ci>
+              <ci>Ki_Value_1DEOXY1268TRIOXO75PHOSPHONOOXYPENTYL123678HEXAHYDRO9HPURIN9YLDRIBITOL_699719_10</ci>
+              <ci>pH_of_Experiment__699719_10</ci>
+              <ci>Temperature_of_Experiment__699719_10</ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter constant="true" id="Ki_Value_1DEOXY1268TRIOXO74PHOSPHONOOXYBUTYL123678HEXAHYDRO9HPURIN9YLDRIBITOL_699719_8" metaid="metaid_65" name="Ki_Value" units="mM" value="0.0000041"></parameter>
+            <parameter constant="true" id="pH_of_Experiment__699719_8" metaid="metaid_66" name="pH_of_Experiment" units="dimensionless" value="7"></parameter>
+            <parameter constant="true" id="Temperature_of_Experiment__699719_8" metaid="metaid_67" name="Temperature_of_Experiment" units="degreecelsius" value="37"></parameter>
+            <parameter constant="true" id="Ki_Value_446DIOXO4567TETRAHYDRO1DRIBITYL1HPYRAZOLO34DPYRIMIDIN3YLBUTYL1PHOSPHATE_688576_9" metaid="metaid_69" name="Ki_Value" units="mM" value="0.0000041"></parameter>
+            <parameter constant="true" id="pH_of_Experiment__688576_9" metaid="metaid_70" name="pH_of_Experiment" units="dimensionless" value="7"></parameter>
+            <parameter constant="true" id="Temperature_of_Experiment__688576_9" metaid="metaid_71" name="Temperature_of_Experiment" units="degreecelsius" value="27"></parameter>
+            <parameter constant="true" id="Ki_Value_1DEOXY1268TRIOXO75PHOSPHONOOXYPENTYL123678HEXAHYDRO9HPURIN9YLDRIBITOL_699719_10" metaid="metaid_73" name="Ki_Value" units="mM" value="0.0000047"></parameter>
+            <parameter constant="true" id="pH_of_Experiment__699719_10" metaid="metaid_74" name="pH_of_Experiment" units="dimensionless" value="7"></parameter>
+            <parameter constant="true" id="Temperature_of_Experiment__699719_10" metaid="metaid_75" name="Temperature_of_Experiment" units="degreecelsius" value="37"></parameter>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
