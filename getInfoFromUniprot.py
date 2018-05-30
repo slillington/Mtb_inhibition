@@ -1,11 +1,13 @@
 #Testing Uniprot programmatic access and sequence alignment
 
 import requests
-ec_nums = ["2.7.1.175"]
+#ec_nums = ["2.7.1.175","1.14.14.12","2.4.99.16"]
 
-for e in ec_nums:
-    url = "https://www.uniprot.org/uniprot/?query=ec%3A" +e+"+AND+organism%3A%22Mycobacterium+tuberculosis%22&sort=score&limit=1&columns=id,protein names,genes,sequence&format=fasta"
-    #url = "https://www.uniprot.org/uniprot/?query=ec%3A2.7.1.175+AND+organism%3A%22Mycobacterium+tuberculosis%22&sort=score&columns=id,reviewed,protein names,genes,sequence&format=fasta"
+
+def fgetInfoFromUniprot(ec_number,organism):
+#Returns a list of dictionaries with protein ID, Organism, Protein name, Gene name, and Sequence
+
+    url = "https://www.uniprot.org/uniprot/?query=ec%3A" +ec_number+"+AND+organism%3A%22" +organism+"%22&sort=score&limit=1&columns=id,protein names,genes,sequence&format=fasta"
     r = requests.get(url)
     rtext = r.text
     
@@ -32,7 +34,10 @@ for e in ec_nums:
     sequence_start = rtext.find('\n',gene_end)
     sequence = rtext[sequence_start+1:-1]
     #print(sequence)
-    temp_dict = {'ID':id,'Organism':org,'Protein Name':name,'Gene':gene,'Sequence':sequence}
-    print(temp_dict)
-
+    sequence2 = sequence.replace(u"\n",u"")
+    #print(sequence2)
+    temp_dict = {'ECnumber':ec_number,'ID':id,'Organism':org,'Protein Name':name,'Gene':gene,'Sequence':sequence2}
+        
+    return temp_dict
+        
 
