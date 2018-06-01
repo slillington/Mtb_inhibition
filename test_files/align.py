@@ -2,9 +2,11 @@
 
 from Bio import pairwise2
 from Bio.SubsMat import MatrixInfo as matlist
+import pandas as pd
 
 matrix = matlist.blosum62
 a = pairwise2.align.globaldx("KEVLA", "EVL", matrix)[0]
-print(matrix)
-print(a[2])
+b = {'result':a}
+c = pd.DataFrame(b)
+print(c)
 
