@@ -1,0 +1,542 @@
+2.7.1.175	MAK1_MYCTU Maltokinase	mak
+2.1.1.226	TLYA_MYCTU 16S/23S rRNA (cytidine-2'-O)-methyltransferase TlyA	tlyA
+2.4.1.36		
+1.14.14.12	HSAA_MYCTU Flavin-dependent monooxygenase, oxygenase subunit HsaA	hsaA
+2.1.1.227	TLYA_MYCTU 16S/23S rRNA (cytidine-2'-O)-methyltransferase TlyA	tlyA
+2.4.99.16	GLGE_MYCTU Alpha-1,4-glucan:maltose-1-phosphate maltosyltransferase	glgE
+6.2.1.41	FAD3_MYCTU 3-[(3aS,4S,7aS)-7a-methyl-1,5-dioxo-octahydro-1H-inden-4-yl]propanoyl:CoA ligase	fadD3
+6.2.1.42	FAC19_MYCTU Long-chain-fatty-acid--CoA/3-oxocholest-4-en-26-oate--CoA ligase	fadD19
+5.4.99.3		
+2.3.2.21	CDTS_MYCTU Cyclo(L-tyrosyl-L-tyrosyl) synthase	Rv2275
+4.2.3.B36		
+2.7.7.94		
+2.5.1.113	CYSM_MYCTU O-phosphoserine sulfhydrylase	cysM
+2.7.7.98		
+2.4.1.250	MSHA_MYCTU D-inositol 3-phosphate glycosyltransferase	mshA
+1.3.99.38	MENJ_MYCTU Menaquinone reductase	menJ
+3.5.1.119	DOP_MYCTU Pup deamidase/depupylase	dop
+2.7.7.95		
+4.2.3.B31		
+4.2.3.B30		
+4.2.3.B33		
+2.3.1.252	MSL3_MYCTU Mycolipanoate synthase	msl3
+3.1.7.9	TUBOL_MYCTU Diterpene synthase	Rv3378c
+4.2.3.B32		
+4.2.3.B35		
+4.2.3.B34		
+2.4.2.47	AFTC_MYCTU Alpha-(1->3)-arabinofuranosyltransferase	aftC
+2.1.1.334		
+2.8.2.37	STF0_MYCTU Trehalose 2-sulfotransferase	stf0
+2.4.1.342	GLGM_MYCTU Alpha-maltose-1-phosphate synthase	glgM
+3.7.1.17	HSAD_MYCTU 4,5:9,10-diseco-3-hydroxy-5,9,17-trioxoandrosta-1(10),2-diene-4-oate hydrolase	hsaD
+2.3.2.7		
+3.4.21.B1		
+2.3.1.261		
+3.4.22.B66		
+1.20.4.3		
+4.99.1.9		
+1.14.99.57		
+3.6.1.27	UPPP_MYCTU Undecaprenyl-diphosphatase	uppP
+5.1.1.5		
+2.5.1.74	MENA_MYCTU 1,4-dihydroxy-2-naphthoate octaprenyltransferase	menA
+2.1.1.193	RSME_MYCTU Ribosomal RNA small subunit methyltransferase E	rsmE
+6.2.1.49		
+2.6.1.17	DAPC_MYCTU Probable N-succinyldiaminopimelate aminotransferase DapC	dapC
+2.4.2.17	HIS1_MYCTU ATP phosphoribosyltransferase	hisG
+2.1.1.171	A0A045IDU3_MYCTX Putative methyltransferase	rsmD
+1.1.1.91	A0A0T9L9F0_MYCTX Aldo/keto reductase	iolS_2
+1.2.5.3		
+1.1.1.133	RMLD_MYCTU dTDP-4-dehydrorhamnose reductase	rmlD
+1.2.1.79	GABD1_MYCTU Succinate-semialdehyde dehydrogenase [NADP(+)] 1	gabD1
+1.8.4.10		
+4.1.1.12		
+5.4.4.1		
+2.7.7.89	GLNE_MYCTU Bifunctional glutamine synthetase adenylyltransferase/adenylyl-removing enzyme	glnE
+2.1.1.163	MENG_MYCTU Demethylmenaquinone methyltransferase	menG
+5.4.2.9		
+3.11.1.1	A0A0T9LT93_MYCTX HAD family hydrolase	phnX
+5.1.3.13	RMLC_MYCTU dTDP-4-dehydrorhamnose 3,5-epimerase	rmlC
+1.1.1.24		
+2.4.1.252		
+5.3.1.16	HIS4_MYCTU Phosphoribosyl isomerase A	priA
+4.1.3.30	ACEA1_MYCTO Isocitrate lyase 1	icl1
+3.1.3.73	RNHPH_MYCTU Bifunctional protein Rv2228c	Rv2228c
+3.4.21.105	A0A045JW70_MYCTX Rhomboid family protein	gluP
+1.3.1.12	TYRA_MYCTU Prephenate dehydrogenase	tyrA
+3.1.7.2	RELA_MYCTU Bifunctional (p)ppGpp synthase/hydrolase RelA	relA
+2.1.1.79	MMAA2_MYCTU Cyclopropane mycolic acid synthase MmaA2	mmaA2
+2.1.1.72	A0A0T9Q917_MYCTX Site-specific DNA-methyltransferase (adenine-specific)	dpnM
+1.10.3.11		
+6.3.4.21	PNCB2_MYCTU Nicotinate phosphoribosyltransferase pncB2	pncB2
+2.8.1.8	LIPA_MYCTU Lipoyl synthase	lipA
+2.8.1.6	BIOB_MYCTU Biotin synthase	bioB
+2.3.1.47	BIOF1_MYCTU 8-amino-7-oxononanoate synthase 1	bioF1
+2.7.1.25	CYSNC_MYCTU Bifunctional enzyme CysN/CysC	cysNC
+3.4.24.33		
+3.4.24.39		
+1.4.3.16	NADB_MYCTU L-aspartate oxidase	nadB
+1.4.1.14		
+1.4.1.10		
+6.1.1.16	SYC_MYCTU Cysteine--tRNA ligase	cysS
+3.2.1.68		
+2.7.4.25	KCY_MYCTU Cytidylate kinase	cmk
+2.5.1.72	NADA_MYCTU Quinolinate synthase A	nadA
+1.2.1.88	L7N4Z6_MYCTO Delta-1-pyrroline-5-carboxylate dehydrogenase	pruA
+3.4.21.B40		
+1.7.1.B1		
+3.1.1.73		
+2.3.1.165		
+2.7.7.27	GLGC_MYCTU Glucose-1-phosphate adenylyltransferase	glgC
+2.8.2.9		
+2.7.1.24	COAE_MYCTU Dephospho-CoA kinase	coaE
+2.4.1.232		
+4.3.2.1	ARLY_MYCTU Argininosuccinate lyase	argH
+3.6.5.6		
+5.1.1.7	DAPF_MYCTU Diaminopimelate epimerase	dapF
+2.7.4.1	PPK1_MYCTU Polyphosphate kinase	ppk
+2.7.6.1	KPRS_MYCTU Ribose-phosphate pyrophosphokinase	prs
+1.1.1.271	R4M5E4_MYCTX GDP-L-fucose synthase	fcl
+1.2.1.3	ALDH_MYCTU Probable aldehyde dehydrogenase	Rv0458
+1.2.1.38	ARGC_MYCTU N-acetyl-gamma-glutamyl-phosphate reductase	argC
+1.4.3.5	PDXH_MYCTU Pyridoxine 5'-phosphate oxidase	pdxH
+2.3.2.B14		
+3.4.24.B20		
+1.11.1.19		
+1.8.3.B2		
+4.1.2.9		
+2.4.2.10	PYRE_MYCTU Orotate phosphoribosyltransferase	pyrE
+1.3.8.1	A0A045IMH9_MYCTX Acyl-CoA dehydrogenase	fadE13
+2.4.2.18	TRPD_MYCTU Anthranilate phosphoribosyltransferase	trpD
+2.6.1.62	BIOA_MYCTU Adenosylmethionine-8-amino-7-oxononanoate aminotransferase	bioA
+3.4.21.B28		
+6.3.2.17	FOLC_MYCTU Dihydrofolate synthase/folylpolyglutamate synthase	folC
+3.4.21.B57		
+3.1.1.23	MGLL_MYCTU Monoacylglycerol lipase	Rv0183
+3.2.1.81		
+3.5.1.104		
+1.13.11.75		
+2.6.1.52	SERC_MYCTU Phosphoserine aminotransferase	serC
+3.1.13.3		
+3.1.27.10		
+2.7.7.B17		
+3.6.4.4		
+1.21.4.2		
+6.3.3.3	BIOD_MYCTU ATP-dependent dethiobiotin synthetase BioD	bioD
+3.4.23.23		
+2.4.1.25	MALQ_MYCTU 4-alpha-glucanotransferase	malQ
+3.4.24.B17		
+2.7.7.13	Q7D5T3_MYCTO Mannose-1-phosphate guanyltransferase	mpg1
+1.11.1.5	A0A0U0S128_MYCTX Cytochrome c551 peroxidase	ccp
+2.4.2.28	MTAP_MYCTU S-methyl-5'-thioadenosine phosphorylase	mtnP
+3.3.1.1	SAHH_MYCTU Adenosylhomocysteinase	ahcY
+2.3.1.1	ARGA_MYCTU Amino-acid acetyltransferase	argA
+2.3.3.9	MASZ_MYCTO Malate synthase G	glcB
+2.3.1.117	DAPD_MYCTU 2,3,4,5-tetrahydropyridine-2,6-dicarboxylate N-succinyltransferase	dapD
+2.3.3.13	LEU1_MYCTU 2-isopropylmalate synthase	leuA
+2.7.1.39	KHSE_MYCTU Homoserine kinase	thrB
+2.4.1.15	OTSA_MYCTU Trehalose-6-phosphate synthase	otsA
+3.1.99.B1		
+2.7.1.71	AROK_MYCTU Shikimate kinase	aroK
+2.3.1.181	LIPB_MYCTU Octanoyltransferase	lipB
+2.3.1.61	KGD_MYCTA Multifunctional 2-oxoglutarate metabolism enzyme	kgd
+2.5.1.54	AROG_MYCTU Phospho-2-dehydro-3-deoxyheptonate aldolase AroG	aroG
+1.2.1.42		
+2.4.2.9	UPP_MYCTU Uracil phosphoribosyltransferase	upp
+2.3.1.12	ODP2_MYCTU Dihydrolipoyllysine-residue acetyltransferase component of pyruvate dehydrogenase complex	dlaT
+3.6.4.B7		
+1.1.1.71		
+1.3.1.86		
+2.5.1.1	A0A045JAS9_MYCTX Multifunctional geranylgeranyl pyrophosphate synthetase: dimethylallyltransferase + geranyltranstransferase + farnesyltranstransferase	idsA1
+6.3.4.1		
+3.5.4.25	RIBBA_MYCTU Riboflavin biosynthesis protein RibBA	ribBA
+1.1.1.85	LEU3_MYCTU 3-isopropylmalate dehydrogenase	leuB
+1.1.1.86	ILVC_MYCTU Ketol-acid reductoisomerase (NADP(+))	ilvC
+2.7.1.6	GAL1_MYCTU Galactokinase	galK
+5.4.99.5	SCMU_MYCTU Secreted chorismate mutase	Rv1885c
+5.4.99.2	MUTB_MYCTU Probable methylmalonyl-CoA mutase large subunit	mutB
+3.4.21.B30		
+5.4.99.25	TRUB_MYCTU tRNA pseudouridine synthase B	truB
+1.3.1.34	Q7D8P5_MYCTO 2,4-dienoyl-coA reductase	fadH
+3.2.1.99		
+1.1.3.37		
+1.13.11.65		
+2.3.1.142		
+2.6.1.42	ILVE_MYCTU Branched-chain-amino-acid aminotransferase	ilvE
+4.1.99.12	RIBBA_MYCTU Riboflavin biosynthesis protein RibBA	ribBA
+4.1.1.3	RRAAH_MYCTU Putative 4-hydroxy-4-methyl-2-oxoglutarate aldolase	rraA
+1.1.1.43		
+2.7.1.77		
+2.4.2.19	NADC_MYCTU Nicotinate-nucleotide pyrophosphorylase [carboxylating]	nadC
+4.1.1.72		
+2.7.8.B13		
+5.3.1.28	GMHA_MYCTO Phosphoheptose isomerase	gmhA
+1.2.1.16	A0A045JTD4_MYCTX Putative succinate-semialdehyde dehydrogenase [NADP+] 2	gabD
+1.11.1.14		
+1.5.3.5		
+2.2.1.2	TAL_MYCTU Transaldolase	tal
+2.2.1.7	DXS_MYCTU 1-deoxy-D-xylulose-5-phosphate synthase	dxs
+2.1.1.129		
+2.7.7.41	CDSA_MYCTU Phosphatidate cytidylyltransferase	cdsA
+3.1.16.1		
+1.8.4.8	CYSH_MYCTU Probable phosphoadenosine phosphosulfate reductase	cysH
+1.8.4.9		
+2.1.1.63	OGT_MYCTU Methylated-DNA--protein-cysteine methyltransferase	ogt
+1.1.1.23	HISX_MYCTU Histidinol dehydrogenase	hisD
+2.2.1.10		
+1.6.3.4		
+6.1.1.19	SYR_MYCTU Arginine--tRNA ligase	argS
+3.5.4.9	FOLD_MYCTU Bifunctional protein FolD	folD
+3.6.3.5	A0A0U0QJW5_MYCTX Putative cation transporter P-type ATPase CtpJ	ctpJ
+3.3.2.1	A0A0T9K7B0_MYCTX Isochorismatase hydrolase	ERS075342_00981
+2.7.1.148	ISPE_MYCTU 4-diphosphocytidyl-2-C-methyl-D-erythritol kinase	ispE
+1.14.19.5		
+4.2.1.55		
+3.6.1.31	HIS2_MYCTU Phosphoribosyl-ATP pyrophosphatase	hisE
+5.3.1.8	A0A045JT41_MYCTX Mannose-6-phosphate isomerase	manA
+5.3.1.9	G6PI_MYCTU Glucose-6-phosphate isomerase	pgi
+2.6.1.9	HIS8_MYCTU Histidinol-phosphate aminotransferase	hisC
+1.2.2.4		
+1.1.1.157	FADB2_MYCTU 3-hydroxybutyryl-CoA dehydrogenase	fadB2
+3.5.1.18	DAPE_MYCTU Putative succinyl-diaminopimelate desuccinylase DapE	dapE
+3.5.1.19	PNCA_MYCTU Nicotinamidase/pyrazinamidase	pncA
+3.6.5.4		
+3.1.3.7	CYSQ_MYCTU 3'-phosphoadenosine 5'-phosphate phosphatase	cysQ
+1.14.99.24		
+2.7.7.59	GLND_MYCTU Bifunctional uridylyltransferase/uridylyl-removing enzyme	glnD
+2.7.7.9	A0A0T9LGL2_MYCTX UTP--glucose-1-phosphate uridylyltransferase	gtaB
+2.8.1.10	THIG_MYCTU Thiazole synthase	thiG
+3.6.4.8		
+1.3.1.6		
+3.1.1.58		
+3.4.13.9	A0A0E8TXI3_MYCTX Dipeptidase pepE	pepQ_1
+4.4.1.9		
+2.1.2.3	PUR9_MYCTU Bifunctional purine biosynthesis protein PurH	purH
+4.1.1.37	DCUP_MYCTU Uroporphyrinogen decarboxylase	hemE
+1.18.1.3	A0A1K3CZ18_MYCTX Nitrite reductase large subunit	todA
+4.3.1.17	SDHL_MYCTU L-serine dehydratase	sdaA
+3.6.3.29	MODC_MYCTU Molybdenum import ATP-binding protein ModC	modC
+4.2.1.9	ILVD_MYCTU Dihydroxy-acid dehydratase	ilvD
+6.3.4.2	PYRG_MYCTU CTP synthase	pyrG
+2.4.1.212	A0A0T9QFW0_MYCTX PGL/p-HBAD biosynthesis glycosyl transferase	hyaD_3
+3.2.2.21	ALKA_MYCTU Probable bifunctional transcriptional activator/DNA repair enzyme AlkA	alkA
+3.2.2.23	FPG1_MYCTU Formamidopyrimidine-DNA glycosylase 1	fpg1
+2.3.1.88		
+2.7.7.51		
+4.1.1.36	COABC_MYCTU Coenzyme A biosynthesis bifunctional protein CoaBC	coaBC
+2.3.1.32		
+2.3.1.30	CYSE_MYCTU Serine acetyltransferase	cysE
+4.2.1.157		
+2.7.1.86		
+4.2.3.1	THRC_MYCTU Threonine synthase	thrC
+3.5.1.B15		
+3.4.23.B5		
+2.3.2.1		
+1.7.1.1		
+1.3.1.44		
+1.17.1.8	DAPB_MYCTU 4-hydroxy-tetrahydrodipicolinate reductase	dapB
+3.5.1.123		
+4.2.3.4	AROB_MYCTU 3-dehydroquinate synthase	aroB
+3.1.22.4	RUVC_MYCTU Crossover junction endodeoxyribonuclease RuvC	ruvC
+1.1.3.4		
+3.4.22.65		
+3.4.21.32		
+1.1.3.8		
+1.5.3.2		
+6.1.1.6	LYSX_MYCTU Lysylphosphatidylglycerol biosynthesis bifunctional protein LysX	lysX
+3.4.22.B69		
+3.4.21.107	A0A0E8WF73_MYCTX Serine protease	htrA
+4.6.1.12	ISPF_MYCTU 2-C-methyl-D-erythritol 2,4-cyclodiphosphate synthase	ispF
+2.7.1.11	PFKB_MYCTU Putative ATP-dependent 6-phosphofructokinase isozyme 2	pfkB
+2.7.1.15	P71913_MYCTU Ribokinase	rbsK
+1.11.1.11		
+1.1.5.3	GLPD1_MYCTU Glycerol-3-phosphate dehydrogenase 1	glpD1
+5.99.1.3	GYRA_MYCTU DNA gyrase subunit A	gyrA
+2.1.1.243		
+3.2.2.15		
+2.8.1.12	MOAE1_MYCTU Molybdopterin synthase catalytic subunit 1	moaE1
+1.17.4.1	RIR2B_MYCTU Ribonucleoside-diphosphate reductase subunit beta nrdF2	nrdF2
+1.16.3.1	BFRB_MYCTU Ferritin BfrB	bfrB
+1.10.3.1		
+2.8.1.7	ISCSL_MYCTU IscS-like cysteine desulfurase	iscS
+2.7.1.23	NADK_MYCTU NAD kinase	ppnK
+2.3.1.41	PPSE_MYCTU Phthiocerol synthesis polyketide synthase type I PpsE	ppsE
+5.1.1.1	ALR_MYCTU Alanine racemase	alr
+5.1.1.3	MURI_MYCTU Glutamate racemase	murI
+3.4.24.31		
+1.8.1.12		
+2.7.8.7	ACPS_MYCTU Holo-[acyl-carrier-protein] synthase	acpS
+4.2.1.51	PHEA_MYCTU Prephenate dehydratase	pheA
+1.8.1.4	DLDH_MYCTU Dihydrolipoyl dehydrogenase	lpdC
+2.4.2.B15		
+4.2.1.22	Y1077_MYCTU Putative cystathionine beta-synthase Rv1077	cbs
+2.4.1.1	PHSG_MYCTU Glycogen phosphorylase	glgP
+1.4.1.13	GLTB_MYCTU Glutamate synthase [NADPH] large chain	gltB
+3.1.30.1		
+3.6.3.25	CYSA_MYCTU Sulfate/thiosulfate import ATP-binding protein CysA	cysA
+3.1.30.2		
+3.6.1.10		
+6.3.1.2	GLN1B_MYCTU Glutamine synthetase	glnA1
+6.3.4.15	A0A1K3S7Y1_MYCTX Bifunctional ligase/repressor BirA	birA_2
+2.3.1.260		
+2.5.1.75	MIAA_MYCTU tRNA dimethylallyltransferase	miaA
+3.4.21.50		
+5.3.1.6	RPIB_MYCTU Ribose-5-phosphate isomerase B	rpiB
+2.6.1.1	AAT_MYCTU Probable aspartate aminotransferase	aspC
+5.1.1.16		
+1.13.12.7		
+2.1.1.37	A0A0T9PD36_MYCTX Cytosine-specific methyltransferase	haeIIIM
+4.3.2.2	P71832_MYCTO Adenylosuccinate lyase	purB
+6.3.5.2	GUAA_MYCTU GMP synthase [glutamine-hydrolyzing]	guaA
+5.3.1.1	TPIS_MYCTU Triosephosphate isomerase	tpiA
+3.1.26.5	RNPA_MYCTU Ribonuclease P protein component	rnpA
+3.1.2.12	A0A1K3D1E8_MYCTX S-formylglutathione hydrolase	frmB
+2.7.4.9	KTHY_MYCTU Thymidylate kinase	tmk
+1.13.12.5		
+2.7.4.6	NDK_MYCTU Nucleoside diphosphate kinase	ndkA
+2.7.4.3	KAD_MYCTU Adenylate kinase	adk
+2.7.6.5	RELA_MYCTU Bifunctional (p)ppGpp synthase/hydrolase RelA	relA
+2.6.1.13	A0A0E8UB71_MYCTX Ornithine aminotransferase rocD2	rocD2_2
+3.4.23.18		
+1.2.1.8	A0A0T9E7D3_MYCTX Aldehyde dehydrogenase NAD-dependent	aldA
+1.2.1.2	A0A045K6M9_MYCTX Formate dehydrogenase	fdhF
+2.5.1.47	CYSK_MYCTU O-acetylserine sulfhydrylase	cysK1
+4.2.1.10	AROQ_MYCTU 3-dehydroquinate dehydratase	aroQ
+2.5.1.48	METB_MYCTU Cystathionine gamma-synthase	metB
+3.4.24.68		
+1.97.1.1		
+5.4.2.2	P95090_MYCTO Phosphoglucomutase	pgmA
+2.4.1.129	PBP1A_MYCTU Penicillin-binding protein 1A	ponA1
+3.5.1.5	URE1_MYCTU Urease subunit alpha	ureC
+2.7.7.65	A0A0T9K892_MYCTX PAS/PAC sensor-containing diguanylate cyclase	adrA
+2.7.7.60	ISPD_MYCTU 2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase	ispD
+2.7.2.4	AK_MYCTU Aspartokinase	ask
+3.4.23.16		
+1.3.1.98	MURB_MYCTU UDP-N-acetylenolpyruvoylglucosamine reductase	murB
+1.1.1.95	SERA_MYCTU D-3-phosphoglycerate dehydrogenase	serA
+4.1.1.48	TRPC_MYCTU Indole-3-glycerol phosphate synthase	trpC
+2.1.3.3	OTC_MYCTU Ornithine carbamoyltransferase	argF
+3.1.1.29	PTH_MYCTU Peptidyl-tRNA hydrolase	pth
+3.5.1.1	ASPG_MYCTU Probable L-asparaginase	ansA
+3.2.1.80		
+6.3.1.5	A0A0U0RRS4_MYCTX NH(3)-dependent NAD(+) synthetase	nadE
+2.5.1.43		
+4.2.1.11	ENO_MYCTU Enolase	eno
+3.4.24.B4		
+3.6.4.1		
+3.6.4.2		
+6.1.1.4	SYL_MYCTU Leucine--tRNA ligase	leuS
+6.3.2.13	MURE_MYCTU UDP-N-acetylmuramoyl-L-alanyl-D-glutamate--2,6-diaminopimelate ligase	murE
+3.4.22.46		
+3.6.1.13	A0A0T9MF26_MYCTX NUDIX hydrolase	nudF_3
+1.8.4.12	P71971_MYCTO Peptide-methionine (R)-S-oxide reductase	MT2748
+6.1.1.1	SYY_MYCTU Tyrosine--tRNA ligase	tyrS
+1.8.4.11	MSRA_MYCTU Peptide methionine sulfoxide reductase MsrA	msrA
+2.7.7.23	GLMU_MYCTU Bifunctional protein GlmU	glmU
+2.8.1.1	THTR_MYCTU Putative thiosulfate sulfurtransferase	cysA1
+6.3.5.6		
+3.4.23.20		
+2.7.7.B22		
+6.2.1.1	ACSA_MYCTU Acetyl-coenzyme A synthetase	acsA
+3.6.3.6		
+2.5.1.19	AROA_MYCTU 3-phosphoshikimate 1-carboxyvinyltransferase	aroA
+2.5.1.18	A0A1K3GDG8_MYCTX Glutathione S-transferase GstB	gstB_3
+3.4.24.3		
+2.5.1.10	EFPP_MYCTU (2E,6E)-farnesyl diphosphate synthase	Rv3398c
+2.5.1.15	DHPS1_MYCTU Dihydropteroate synthase	folP1
+2.4.1.207		
+3.4.16.6		
+3.6.3.14	ATPA_MYCTU ATP synthase subunit alpha	atpA
+5.4.2.10	GLMM_MYCTU Phosphoglucosamine mutase	glmM
+5.4.2.11	GPMA_MYCTU 2,3-bisphosphoglycerate-dependent phosphoglycerate mutase	gpmA
+3.4.16.4	PBP1A_MYCTU Penicillin-binding protein 1A	ponA1
+4.2.1.24	HEM2_MYCTU Delta-aminolevulinic acid dehydratase	hemB
+1.11.1.6	A0A051U8P1_9MYCO Catalase	K875_01580
+3.6.3.26		
+3.4.17.18		
+3.1.3.16	PSTP_MYCTU PP2C-family Ser/Thr phosphatase	pstP
+1.2.4.1	ODP1_MYCTU Pyruvate dehydrogenase E1 component	aceE
+1.1.1.35	A0A1K3EIN6_MYCTX 3-hydroxyacyl-CoA dehydrogenase	fadJ
+1.1.1.37	MDH_MYCTU Malate dehydrogenase	mdh
+2.7.7.B16		
+3.6.3.20	A0A0T9K0S7_MYCTX Sugar-transport ATP-binding protein ABC transporter sugC	sugC_1
+2.3.1.9	FADA4_MYCTU Probable acetyl-CoA acetyltransferase	fadA4
+2.3.1.8	PTA_MYCTU Phosphate acetyltransferase	pta
+4.2.2.3		
+4.2.2.8		
+5.4.2.8	A0A0E7TZP6_MYCTX Phosphomannomutase	pmmA
+3.4.24.30		
+1.1.1.49	G6PD1_MYCTU Glucose-6-phosphate 1-dehydrogenase 1	zwf1
+3.6.4.11		
+2.7.13.1		
+2.7.13.3	MPRB_MYCTU Signal transduction histidine-protein kinase/phosphatase MprB	mprB
+5.1.3.2	GALE_MYCTU UDP-glucose 4-epimerase	galE1
+2.7.1.33	COAX_MYCTU Type III pantothenate kinase	coaX
+2.7.1.30	GLPK_MYCTU Glycerol kinase	glpK
+2.7.1.35	A0A1K3BML3_MYCTX Pyridoxal kinase PdxY	pdxY
+2.4.1.14		
+2.1.1.182	RSMA_MYCTU Ribosomal RNA small subunit methyltransferase A	ksgA
+4.3.3.7	DAPA_MYCTU 4-hydroxy-tetrahydrodipicolinate synthase	dapA
+2.4.2.B14		
+2.7.2.3	PGK_MYCTU Phosphoglycerate kinase	pgk
+3.1.3.11	CYSQ_MYCTU 3'-phosphoadenosine 5'-phosphate phosphatase	cysQ
+6.2.1.26	MENE_MYCTU Probable 2-succinylbenzoate--CoA ligase	menE
+5.1.3.1	RPE_MYCTU Ribulose-phosphate 3-epimerase	rpe
+2.3.1.180	FABH_MYCTU 3-oxoacyl-[acyl-carrier-protein] synthase 3	fabH
+2.7.7.18	NADD_MYCTU Probable nicotinate-nucleotide adenylyltransferase	nadD
+3.1.4.41		
+4.2.99.18	END8A_MYCTU Endonuclease 8 1	nei1
+3.4.11.18	MAP11_MYCTU Methionine aminopeptidase 1	map-1
+6.3.2.5	COABC_MYCTU Coenzyme A biosynthesis bifunctional protein CoaBC	coaBC
+2.4.2.8	HPRT_MYCTU Hypoxanthine-guanine phosphoribosyltransferase	hpt
+3.1.15.1		
+3.6.1.23	DUT_MYCTU Deoxyuridine 5'-triphosphate nucleotidohydrolase	dut
+2.4.2.1	PUNA_MYCTU Purine nucleoside phosphorylase	punA
+2.4.2.4	TYPH_MYCTU Thymidine phosphorylase	deoA
+2.7.11.1	PKNH_MYCTU Serine/threonine-protein kinase PknH	pknH
+3.5.4.16	GCH1_MYCTU GTP cyclohydrolase 1	folE
+6.5.1.2	DNLJ_MYCTU DNA ligase A	ligA
+3.1.11.4		
+4.2.1.33	LEUD_MYCTU 3-isopropylmalate dehydratase small subunit	leuD
+6.3.4.5	ASSY_MYCTU Argininosuccinate synthase	argG
+1.1.1.78		
+1.6.99.3	V5NFU0_MYCTX Mutant NADH dehydrogenase	ndh
+2.5.1.7	MURA_MYCTU UDP-N-acetylglucosamine 1-carboxyvinyltransferase	murA
+2.5.1.6	METK_MYCTU S-adenosylmethionine synthase	metK
+2.5.1.3	THIE_MYCTU Thiamine-phosphate synthase	thiE
+2.5.1.9	RISA_MYCTU Riboflavin synthase	ribE
+1.17.7.4	ISPH2_MYCTU 4-hydroxy-3-methylbut-2-enyl diphosphate reductase 2	ispH2
+3.1.13.2		
+3.4.24.83		
+2.7.1.2	PPGK_MYCTA Polyphosphate glucokinase	ppgK
+2.7.1.107	DAGK_MYCTO Diacylglycerol kinase	dagK
+1.9.3.1	COX2_MYCTU Cytochrome c oxidase subunit 2	ctaC
+1.7.2.4		
+2.7.1.72		
+4.1.1.20	DCDA_MYCTU Diaminopimelate decarboxylase	lysA
+2.1.1.13	METH_MYCTU Methionine synthase	metH
+3.4.21.89	LEP_MYCTU Signal peptidase I	lepB
+3.4.21.88	LEXA_MYCTU LexA repressor	lexA
+3.2.1.36		
+3.4.21.85		
+3.4.22.50		
+3.1.27.3		
+3.1.27.2		
+4.1.3.3	A0A1K3DEM2_MYCTX Dihydrodipicolinate synthase DapA_1	dapA_2
+2.4.1.214		
+3.1.3.25	SUHB_MYCTU Inositol-1-monophosphatase SuhB	suhB
+3.5.2.6	BLAC_MYCTU Beta-lactamase	blaC
+4.1.3.27	TRPE_MYCTU Anthranilate synthase component 1	trpE
+4.1.2.13	ALF_MYCTU Fructose-bisphosphate aldolase	fba
+2.7.7.3	COAD_MYCTU Phosphopantetheine adenylyltransferase	coaD
+2.7.7.7	DPO1_MYCTU DNA polymerase I	polA
+2.7.7.6	RPOB_MYCTU DNA-directed RNA polymerase subunit beta	rpoB
+2.7.7.4	CYSNC_MYCTU Bifunctional enzyme CysN/CysC	cysNC
+2.7.8.B10		
+3.4.23.36	LSPA_MYCTU Lipoprotein signal peptidase	lspA
+5.2.1.8	PPIA_MYCTU Peptidyl-prolyl cis-trans isomerase A	ppiA
+3.6.3.23		
+1.3.3.4	PPOX_MYCTU Protoporphyrinogen oxidase	hemY
+2.5.1.20		
+1.2.1.12	G3P_MYCTU Glyceraldehyde-3-phosphate dehydrogenase	gap
+1.2.1.11	DHAS_MYCTU Aspartate-semialdehyde dehydrogenase	asd
+1.15.1.1	SODC_MYCTU Superoxide dismutase [Cu-Zn]	sodC
+4.2.1.20	TRPB_MYCTU Tryptophan synthase beta chain	trpB
+1.11.1.15	TPX_MYCTU Thiol peroxidase	tpx
+2.2.1.1	TKT_MYCTU Transketolase	tkt
+2.3.1.206		
+2.2.1.6	ILVB1_MYCTU Acetolactate synthase large subunit IlvB1	ilvB1
+2.7.8.13	MRAY_MYCTU Phospho-N-acetylmuramoyl-pentapeptide-transferase	mraY
+1.8.4.7		
+6.1.1.10	SYM_MYCTU Methionine--tRNA ligase	metG
+1.1.1.25	A0A1K3RIC7_MYCTX Shikimate dehydrogenase (NADP(+))	aroE_2
+1.6.5.4		
+1.6.5.3	A0A045IAH8_MYCTX NADH dehydrogenase I subunit J	nuoJ
+1.6.5.2	LPDA_MYCTU NAD(P)H dehydrogenase (quinone)	lpdA
+3.5.4.5	CDD_MYCTU Cytidine deaminase	cdd
+6.1.1.17	SYE_MYCTU Glutamate--tRNA ligase	gltX
+2.4.2.36		
+6.1.1.7	SYA_MYCTU Alanine--tRNA ligase	alaS
+3.6.5.1		
+6.1.1.5	SYI_MYCTU Isoleucine--tRNA ligase	ileS
+2.3.2.12		
+3.6.3.7		
+6.2.1.15		
+3.6.4.12	UVRD1_MYCTU ATP-dependent DNA helicase UvrD1	uvrD1
+3.6.4.13	DEAD_MYCTU ATP-dependent RNA helicase DeaD	deaD
+1.5.1.2	P5CR_MYCTU Pyrroline-5-carboxylate reductase	proC
+1.5.1.3	DYR_MYCTU Dihydrofolate reductase	folA
+3.8.1.3	A0A0T9KJK1_MYCTX Epoxide hydrolase	dehH1_1
+4.2.1.46	RMLB_MYCTU dTDP-glucose 4,6-dehydratase	rmlB
+3.4.22.35		
+3.5.1.4	AMI3_MYCTU Putative amidase AmiC	amiC
+1.6.99.1	A0A0T9K223_MYCTX FAD/FMN-binding oxidoreductase	namA
+1.13.11.2	A0A0T9MMY7_MYCTX Lactoylglutathione lyase	catE
+4.2.1.78		
+3.6.3.B1		
+3.4.11.1	LPQL_MYCTU Probable lipoprotein aminopeptidase LpqL	lpqL
+1.2.1.51		
+3.1.3.5	A0A1K3CWY5_MYCTX 5'-nucleotidase SurE	surE
+3.1.3.1	A0A0T9L699_MYCTX Integral membrane cytochrome D ubiquinol oxidase (Subunit II) CydB	cydB_1
+3.1.3.2	SAPM_MYCTU Phosphatidylinositol-3-phosphatase	sapM
+3.1.3.3	SERB2_MYCTU Phosphoserine phosphatase SerB2	serB2
+3.6.1.1	IPYR_MYCTU Inorganic pyrophosphatase	ppa
+1.14.13.54		
+1.4.4.2	GCSP_MYCTU Probable glycine dehydrogenase (decarboxylating)	gcvP
+3.1.1.2	A0A045I2W5_MYCTX Alpha/beta fold family hydrolase	cpo_1
+3.1.1.3	LIPY_MYCTU Triacylglycerol lipase	lipY
+4.4.1.4		
+3.2.1.14	A0A0T9JXR2_MYCTX Chitinase D	chiD
+1.8.99.2		
+3.5.1.88	DEF_MYCTU Peptide deformylase	def
+4.1.2.25	FOLB_MYCTU Dihydroneopterin aldolase	folB
+2.5.1.61	HEM3_MYCTU Porphobilinogen deaminase	hemC
+1.3.1.9	INHA_MYCTU Enoyl-[acyl-carrier-protein] reductase [NADH]	inhA
+3.1.3.31		
+2.7.4.8	KGUA_MYCTU Guanylate kinase	gmk
+3.5.1.2	PDXT_MYCTU Pyridoxal 5'-phosphate synthase subunit PdxT	pdxT
+2.7.1.40	KPYK_MYCTU Pyruvate kinase	pyk
+2.1.2.1	GLYA1_MYCTU Serine hydroxymethyltransferase 1	glyA1
+3.1.1.42		
+1.18.1.2	FPRA_MYCTU NADPH-ferredoxin reductase FprA	fprA
+4.6.1.1	Y1264_MYCTU pH-sensitive adenylate cyclase Rv1264	Rv1264
+3.4.21.61		
+3.4.21.97		
+3.4.21.92	CLPP2_MYCTU ATP-dependent Clp protease proteolytic subunit 2	clpP2
+3.4.21.90		
+4.3.1.5		
+3.4.22.B28		
+3.1.1.1	LIPF_MYCTU Carboxylesterase LipF	lipF
+1.6.5.11	NUOG_MYCTU NADH-quinone oxidoreductase subunit G	nuoG
+1.2.4.2	KGD_MYCTA Multifunctional 2-oxoglutarate metabolism enzyme	kgd
+2.1.2.11	PANB_MYCTU 3-methyl-2-oxobutanoate hydroxymethyltransferase	panB
+1.5.1.20	A0A0T9L5G3_MYCTX Methylenetetrahydrofolate reductase	metF
+4.2.3.5	AROC_MYCTU Chorismate synthase	aroC
+3.2.1.1	TRES_MYCTU Trehalose synthase/amylase TreS	treS
+6.3.2.1	PANC_MYCTU Pantothenate synthetase	panC
+4.2.1.2	FUMC_MYCTU Fumarate hydratase class II	fumC
+4.2.1.3	ACNA_MYCTU Aconitate hydratase A	acn
+6.3.2.4	DDL_MYCTU D-alanine--D-alanine ligase	ddl
+4.2.1.1	MTCA1_MYCTU Beta-carbonic anhydrase 1	mtcA1
+6.3.2.8	MURC_MYCTU UDP-N-acetylmuramate--L-alanine ligase	murC
+6.3.2.9	MURD_MYCTA UDP-N-acetylmuramoylalanine--D-glutamate ligase	murD
+4.99.1.1	HEMH_MYCTU Ferrochelatase	hemH
+3.4.22.32		
+1.1.1.205	IMDH_MYCTU Inosine-5'-monophosphate dehydrogenase	guaB
+3.2.2.27	UNG_MYCTU Uracil-DNA glycosylase	ung
+3.2.2.20	L7N613_MYCTO DNA-3-methyladenine glycosidase I	tag
+3.6.3.52		
+3.6.3.51		
+3.2.1.117		
+3.2.1.123		
+3.2.1.52	A0A1K3RJP8_MYCTX Beta-N-acetylhexosaminidase	ybbD
+3.4.24.74		
+1.14.13.67		
+1.1.1.14	A0A045ISW5_MYCTX Alcohol dehydrogenase	adh_2
+3.1.26.4	RNHPH_MYCTU Bifunctional protein Rv2228c	Rv2228c
+1.1.1.1	ADHD_MYCTU Putative alcohol dehydrogenase D	adhD
+4.1.99.22	MOAA1_MYCTU GTP 3',8-cyclase 1	moaA1
+3.6.3.47		
+4.3.1.19	ILVA_MYCTU L-threonine dehydratase biosynthetic IlvA	ilvA
+6.1.1.21	SYH_MYCTU Histidine--tRNA ligase	hisS
+5.99.1.2	TOP1_MYCTU DNA topoisomerase 1	topA
+3.6.5.2		

@@ -117,7 +117,7 @@ def filterByOrg(other_organism1,other_organism2=None,other_organism3=None):
     filtered_prot = [x['Protein Name'] for x in filtered_info]
     filtered_gene = [x['Gene'] for x in filtered_info]
     
-    file = open(r"C:\Github\pythonScripts\Mtb_inhibition\Mtb_inhibition\data\filter_noHuman.tsv",'w')
+    file = open(r"C:\Github\pythonScripts\Mtb_inhibition\Mtb_inhibition\data\filter_noHuman90.tsv",'w')
     for i in range(0,len(filtered_EC)-1):
         file.write(filtered_EC[i] + '\t' + filtered_prot[i] + '\t' + filtered_gene[i] + '\n')
     file.close()                
@@ -174,8 +174,8 @@ def filterByOrg(other_organism1,other_organism2=None,other_organism3=None):
                     tb_tb_alignment = pairwise2.align.globaldx(mtb_seq, mtb_seq, matrix,score_only=True)
                     homology = tb_other_alignment/tb_tb_alignment
                     #print(homology)
-                
-                    if homology < 0.30:
+               
+                    if homology < 0.50:
                         filtered_info.append(mtb_info)
                         
                 except:
@@ -189,7 +189,7 @@ def filterByOrg(other_organism1,other_organism2=None,other_organism3=None):
         
         print("Number of EC numbers in Staphylococcus aureus not matched with sequence: " + str(other_miscount))
         print(len(filtered_info))
-        file = open(r"C:\Github\pythonScripts\Mtb_inhibition\Mtb_inhibition\data\filter_noHumanStaph.tsv",'w')
+        file = open(r"C:\Github\pythonScripts\Mtb_inhibition\Mtb_inhibition\data\filter_noHumanStaph90.tsv",'w')
         for i in range(0,len(filtered_EC)-1):
             file.write(filtered_EC[i] + '\t' + filtered_prot[i] + '\t' + filtered_gene[i] + '\n')
         file.close()
@@ -240,7 +240,7 @@ def filterByOrg(other_organism1,other_organism2=None,other_organism3=None):
                     homology = tb_other_alignment/tb_tb_alignment
                     #print(homology)
                 
-                    if homology < 0.30:
+                    if homology < 0.50:
                         filtered_info.append(mtb_info)
                         
                 except:
@@ -255,7 +255,7 @@ def filterByOrg(other_organism1,other_organism2=None,other_organism3=None):
         filtered_prot = [x['Protein Name'] for x in filtered_info]
         filtered_gene = [x['Gene'] for x in filtered_info]
         
-        file = open(r"C:\Github\pythonScripts\Mtb_inhibition\Mtb_inhibition\data\filtered_noHumanStaphEcoli.tsv",'w')
+        file = open(r"C:\Github\pythonScripts\Mtb_inhibition\Mtb_inhibition\data\filtered_noHumanStaphEcoli90.tsv",'w')
         
         for i in range(0,len(filtered_EC)-1):
             file.write(filtered_EC[i] + '\t' + filtered_prot[i] + '\t' + filtered_gene[i] + '\n')
