@@ -1,2 +1,6 @@
 # Mtb_inhibition
-M tuberculosis cheminformatics project
+Mycobacterium tuberculosis cheminformatics project
+
+Emerging drug resistance is a common issue with treating tuberculosis that leads to poor patient outcomes. The goal of this project was to apply a systems biology approach identify M. tuberculosis drug targets that would be more recalcitrant to emerging drug resistance by employing multiple mechanisms of action. Rather than a one drug-one target strategy, our idea was to target essential enzymes in metabolism whose substrates could act as competitive inhibitors to other key enzymes. Our hypothesis was, by inhibiting specific essential enzymes, the resulting build up in their substrate pool could inhibit other metabolic enzymes, making it harder for resistance to emerge.
+
+The approach leveraged cheminformatics to identify chemical similarity among the metabolites processed by essential enzymes within M. tuberculosis. Briefly, I started by building a list of M. tuberculosis metabolites from the published genome-scale model and quantifying the pairwise Tanimoto similarity of all pairs of metabolites. Then, I identified essential protein targets that M. tuberculosis cannot live without that are also sufficiently different in amino acid sequence from a human homolog, to reduce potential cytotoxicity.
